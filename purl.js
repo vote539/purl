@@ -7,11 +7,11 @@
 
 ;(function(factory) {
     if (typeof define === 'function' && define.amd) {
-        define(factory);
+        define("jquery.purl", ["jquery"], factory);
     } else {
         window.purl = factory();
     }
-})(function() {
+})(function($) {
 
     var tag2attr = {
             a       : 'href',
@@ -260,7 +260,7 @@
         }
     };
 
-    purl.jQuery(window.jQuery);
+    purl.jQuery($);
 
     return purl;
 
